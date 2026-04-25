@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PortfolioGallery from '../components/PortfolioGallery';
+import ProfessionalMoments from '../components/ProfessionalMoments';
 
 const GalleryPage = () => {
   return (
@@ -27,8 +28,9 @@ const GalleryPage = () => {
       </section>
 
       {/* Main Gallery */}
-      <div className="py-10 relative z-20">
+      <div className="py-10">
         <PortfolioGallery />
+        <ProfessionalMoments />
       </div>
     </div>
   );

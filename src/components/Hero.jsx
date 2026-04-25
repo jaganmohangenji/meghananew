@@ -35,10 +35,15 @@ const Hero = () => {
           >
 
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-poppins font-bold leading-tight mb-8 flex flex-col w-max">
+              <span>Innovative Technology</span>
+              <span className="text-center w-full">&amp;</span>
+              <span>Security Solutions</span>
+            </h1>
+            {/* <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold leading-tight mb-6">
               Innovative Technology & <br />
               <span className="">Security Solutions</span>
-            </h1>
+            </h1> */}
 
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg leading-relaxed">
               Providing services such as application development, hardware solutions, security infrastructure, and maintenance.
