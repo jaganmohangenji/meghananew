@@ -28,7 +28,7 @@ const Projects = () => {
       </section>
 
       {/* Naval Projects */}
-      <div className="py-10 relative z-20">
+      <div className="py-10">
         <ProjectsComponent />
       </div>
 

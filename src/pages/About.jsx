@@ -7,13 +7,13 @@ const About = () => {
   const teamMembers = [
     {
       name: "B Meghna",
-      role: "AI Developer & Proprietor",
+      role: "Proprietor & AI Designer",
       bio: "MS in Horticulture from Royal Agricultural University, London. Founder of Meghana Technologies with expertise in innovation-driven solutions and sustainable technologies.",
       image: "/assets/PEOPLE/MEGHANA.jpeg"
     },
     {
       name: "B. Srinivas",
-      role: "Founder & Projects Director – Lead Solutions & Technical Architect",
+      role: "Founder & Project Director",
       bio: "MBA graduate with 12+ years of IT experience, specializing in solution architecture, enterprise systems, and large-scale project delivery.",
       image: "/assets/PEOPLE/B.Srinivas.jpeg"
     },

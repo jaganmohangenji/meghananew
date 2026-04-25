@@ -6,27 +6,28 @@ import { X, ChevronLeft, ChevronRight, Images } from 'lucide-react';
 const galleryGroups = [
   {
     id: 1,
-    title: "Interior designing and execution of officers' ward at INS Vishwakarma",
+    title: "Interior designing and execution of officers' ward at INS Virbahu",
     images: ["/assets/ARC-ND(V)-1.jpg", "/assets/ARC-ND(V)-2.jpg"]
   },
   {
     id: 2,
+    title: "Interior and exterior design of the Officers' Wardroom on INS Virbahu",
+    images: ["/assets/INS-VIRBAHU-1.jpg", "/assets/INS-VIRBAHU-2.jpg"]
+  },
+  {
+    id: 3,
     title: "Interior and exterior designing and execution of Samudra Cafe at INS Dega",
     images: ["/assets/DEGA-1.png", "/assets/DEGA-2.jpg", "/assets/DEGA-3.png"]
   },
   {
-    id: 3,
-    title: "Interior design and execution of Flag Command Post (FCP) at INS Mysore",
-    images: ["/assets/INS-MYSORE-1.png", "/assets/INS-MYSORE-2.png", "/assets/INS-MYSORE-3.png", "/assets/INS-MYSORE-4.png"]
-  },
-  {
     id: 4,
-    title: "Modernisation of CINCAN Flag Command Post at INS Virbahu",
-    images: ["/assets/INS-VIRBAHU-1.jpg", "/assets/INS-VIRBAHU-2.jpg"]
+    title: "Interior design and execution of Flag Command Post (FCP) at INS Mysore ship",
+    images: ["/assets/INS-MYSORE-1.png", "/assets/INS-MYSORE-4.png"]
   },
+
   {
     id: 5,
-    title: "Interior designing and renovation of officers’ cabins and wardroom at INS Rana",
+    title: "Interior design and execution of the Officers' Wardroom at INS Rana ship",
     images: ["/assets/INS-RANA.png"]
   },
   {
@@ -36,12 +37,12 @@ const galleryGroups = [
   },
   {
     id: 7,
-    title: "Interior and Exterior Designing of SAGAR",
-    images: ["/assets/INS-SAGAR.png", "/assets/INS-SAGAR-2.png"]
+    title: "Interior and exterior design and landscaping at Sagar – INS Viswakarma",
+    images: ["/assets/INS-SAGAR.png"]
   },
   {
     id: 8,
-    title: "Renovation & Security Infrastructure at INS Dega",
+    title: "Interior and exterior design and execution of the conference room of the Logistics Department at INS Dega",
     images: ["/assets/INS-DEGA-1.png", "/assets/INS-DEGA-2.png"]
   },
   {
