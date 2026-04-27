@@ -1,79 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ShieldCheck, ArrowRight, Settings, CheckCircle } from 'lucide-react';
-import SectionHeader from '../components/SectionHeader';
+import { ShieldCheck, ArrowRight, Settings, CheckCircle, ChevronDown, Anchor } from 'lucide-react';
+import { serviceDataMap } from '../data/servicesData';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ServiceDetail = () => {
   const { serviceId } = useParams();
-
-  // Dynamic content mapping based on URL
-  const serviceDataMap = {
-    'security-systems': {
-      title: 'Security Systems, Sales & Services',
-      description: 'We provide defense-grade security hardware installation and maintenance. Our systems are designed to monitor, track, and protect critical infrastructure such as naval bases and commercial enterprise units.',
-      features: ['CCTV Surveillance', 'Boom Barriers', 'Biometric Devices', 'RFID Readers & Tags', 'QR Code Scanners', 'Metal Detectors (Hand-held & Door Frame)', 'Explosive Detectors', 'Face Recognition'],
-      image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2060&auto=format&fit=crop'
-    },
-    'software-development': {
-      title: 'Software Solutions',
-      description: 'Specializing in RFID technology and cloud computing, our software offerings are highly customizable and scalable. We solve specific operational bottlenecks with tailor-made code.',
-      features: ['Custom Software Application Development', 'Cashless Transaction Applications Using RFID Technology', 'Biometric Attendance Systems', 'Vehicle Tracking Applications', 'Inventory Management Systems', 'Digital Management System', 'AI/ML'],
-      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop'
-    },
-    'interior-designing': {
-      title: 'Interior Designing',
-      description: 'From conceptualization to execution, we design functional and aesthetically premium interiors for naval and enterprise facilities.',
-      features: ['Space Planning', 'Ergonomic Furniture', 'Lighting Design', 'Material Sourcing', 'Turnkey Execution'],
-      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1974&auto=format&fit=crop'
-    },
-    'renovation': {
-      title: 'Renovation Works',
-      description: 'We transform old infrastructure into modern, highly functional workspaces with minimal downtime.',
-      features: ['Structural Repairs', 'Complete Overhauls', 'Modernization', 'Upgrades to Naval Specs'],
-      image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1931&auto=format&fit=crop'
-    },
-    'fabrication': {
-      title: 'Fabrication Elements',
-      description: 'Custom metal and material fabrication for structural and security needs.',
-      features: ['Custom Metal Works', 'Structural Supports', 'Security Gates', 'Industrial Racking'],
-      image: 'https://images.unsplash.com/photo-1504917595217-d4ce5eb922fc?q=80&w=2052&auto=format&fit=crop'
-    },
-    'civil-works': {
-      title: 'Civil Works',
-      description: 'Reliable civil engineering services supporting both our security installations and independent infrastructure projects.',
-      features: ['Site Prep', 'Foundation Works', 'Pathways & Landscaping integration', 'Core Construction'],
-      image: 'https://images.unsplash.com/photo-1541888081121-789a77914bf6?q=80&w=2070&auto=format&fit=crop'
-    }
-  };
+  const [activeCapability, setActiveCapability] = useState(null);
 
   // Fallback content if URL is wrong
   const content = serviceDataMap[serviceId] || {
     title: 'Service Not Found',
     description: 'Please select a valid service from our menu.',
-    features: [],
+    capabilities: [],
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'
+  };
+
+  const toggleCapability = (name) => {
+    if (activeCapability === name) {
+      setActiveCapability(null);
+    } else {
+      setActiveCapability(name);
+    }
   };
 
   return (
     <div className="bg-white min-h-screen">
-
       {/* Dynamic Header */}
-      <section className="relative h-[20vh] bg-[var(--color-navy)] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[25vh] bg-[var(--color-navy)] flex items-center justify-center overflow-hidden pt-6">
         <div
           className="absolute inset-0 opacity-30 bg-cover bg-center"
           style={{ backgroundImage: `url(${content.image})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy)] to-transparent"></div>
         <div className="relative z-10 text-center px-4 max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-poppins font-bold text-white mb-6">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-5xl font-poppins font-bold text-white mb-4"
+           >
             {content.title}
-          </h1>
-          <div className="h-1 w-24 bg-[var(--color-orange)] mx-auto"></div>
+          </motion.h1>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="h-1 w-24 bg-[var(--color-orange)] mx-auto"
+           ></motion.div>
         </div>
       </section>
 
       {/* Detail Content */}
-      <section className="py-20">
+      <section className="py-20 relative z-20 bg-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
           <div className="flex flex-col lg:flex-row gap-16">
 
@@ -84,17 +62,58 @@ const ServiceDetail = () => {
                 {content.description}
               </p>
 
-              <h3 className="text-2xl font-poppins font-bold text-[var(--color-navy)] mb-6 flex items-center">
-                <Settings className="text-[var(--color-orange)] mr-3" /> Core Capabilities
-              </h3>
+              <div className="mb-12">
+                 <h3 className="text-2xl font-poppins font-bold text-[var(--color-navy)] mb-6 flex items-center">
+                   <Settings className="text-[var(--color-orange)] mr-3" /> Core Capabilities & Projects
+                 </h3>
+                 <p className="text-gray-500 mb-6 italic text-sm">Click on any capability below to view our portfolio of completed projects for that specific domain.</p>
 
-              <div className="grid sm:grid-cols-2 gap-4">
-                {content.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-start bg-[var(--color-light-gray)] p-4 rounded-lg border border-gray-100 shadow-sm">
-                    <CheckCircle className="text-[var(--color-tech-blue)] mr-3 mt-0.5 shrink-0" size={20} />
-                    <span className="font-medium text-gray-800">{feature}</span>
-                  </div>
-                ))}
+                 <div className="flex flex-col gap-4">
+                   {content.capabilities?.map((capability, idx) => {
+                     const isOpen = activeCapability === capability.name;
+                     return (
+                       <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm transition-all">
+                         <button 
+                           onClick={() => toggleCapability(capability.name)}
+                           className={`w-full flex items-center justify-between p-5 text-left font-poppins font-medium transition-colors ${isOpen ? 'bg-[var(--color-navy)] text-white' : 'bg-[var(--color-light-gray)] text-gray-800 hover:bg-gray-100'}`}
+                         >
+                           <div className="flex items-center">
+                             <CheckCircle className={`${isOpen ? 'text-[var(--color-orange)]' : 'text-[var(--color-tech-blue)]'} mr-3 shrink-0`} size={20} />
+                             <span className="text-lg">{capability.name}</span>
+                           </div>
+                           <ChevronDown className={`shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                         </button>
+
+                         <AnimatePresence>
+                           {isOpen && (
+                             <motion.div
+                               initial={{ height: 0, opacity: 0 }}
+                               animate={{ height: 'auto', opacity: 1 }}
+                               exit={{ height: 0, opacity: 0 }}
+                               transition={{ duration: 0.3 }}
+                             >
+                               <div className="p-6 bg-white border-t border-gray-100">
+                                  <h4 className="font-bold text-[var(--color-navy)] mb-4 text-sm uppercase tracking-wider">Completed Projects</h4>
+                                  {capability.projects && capability.projects.length > 0 ? (
+                                    <ul className="space-y-4">
+                                      {capability.projects.map((proj, pIdx) => (
+                                        <li key={pIdx} className="flex items-start text-gray-600">
+                                           <Anchor size={16} className="text-[var(--color-tech-blue)] mr-3 mt-1 shrink-0" />
+                                           <span className="leading-relaxed">{proj}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  ) : (
+                                    <p className="text-gray-400 italic">Project details are restricted or currently being updated.</p>
+                                  )}
+                               </div>
+                             </motion.div>
+                           )}
+                         </AnimatePresence>
+                       </div>
+                     );
+                   })}
+                 </div>
               </div>
             </div>
 

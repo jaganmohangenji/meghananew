@@ -36,10 +36,10 @@ const About = () => {
       image: "/assets/PEOPLE/Narendra.jpeg"
     },
     {
-      name: "Shaik Asif Umeed",
-      role: "Machine Learning Engineer",
-      bio: "Passionate about applying machine learning and AI techniques to solve complex problems. Experienced in model training, evaluation, and integrating ML solutions into scalable production environments.",
-      image: "/assets/PEOPLE/Shaik.jpeg"
+      "name": "Shaik Asif Umeed",
+      "role": "Software Developer",
+      "bio": "Software developer skilled in building scalable web applications using Java and modern technologies, with a focus on clean and efficient code.",
+      "image": "/assets/PEOPLE/Shaik.jpeg"
     }
   ];
 

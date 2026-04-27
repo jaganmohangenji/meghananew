@@ -81,11 +81,11 @@ const Footer = () => {
           <div>
             <h4 className="font-poppins font-bold text-lg mb-6 text-white inline-block border-b-2 border-[var(--color-tech-blue)] pb-1">Core Services</h4>
             <ul className="space-y-3">
-              <li><Link to="/services/security-systems" className="text-gray-400 hover:text-[var(--color-orange)] transition-colors text-sm">Security Systems</Link></li>
-              <li><Link to="/services/software-development" className="text-gray-400 hover:text-[var(--color-orange)] transition-colors text-sm">RFID Solutions</Link></li>
-              <li><Link to="/services/software-development" className="text-gray-400 hover:text-[var(--color-orange)] transition-colors text-sm">Custom Software</Link></li>
-              <li><Link to="/services/security-systems" className="text-gray-400 hover:text-[var(--color-orange)] transition-colors text-sm">Biometric Integration</Link></li>
-              <li><Link to="/services/civil-works" className="text-gray-400 hover:text-[var(--color-orange)] transition-colors text-sm">Infrastructure Civil Works</Link></li>
+              <li><Link to="/services/security-systems" className="text-gray-400 hover:text-[var(--color-orange)] transition-colors text-sm">Security Systems, Sales & Services</Link></li>
+              <li><Link to="/services/software-development" className="text-gray-400 hover:text-[var(--color-orange)] transition-colors text-sm">Software Solutions</Link></li>
+              <li><Link to="/services/engineering-infrastructure" className="text-gray-400 hover:text-[var(--color-orange)] transition-colors text-sm">Engineering & Infrastructure</Link></li>
+              {/* <li><Link to="/services/security-systems" className="text-gray-400 hover:text-[var(--color-orange)] transition-colors text-sm">Biometric Integration</Link></li>
+              <li><Link to="/services/engineering-infrastructure" className="text-gray-400 hover:text-[var(--color-orange)] transition-colors text-sm">Infrastructure Civil Works</Link></li> */}
             </ul>
           </div>
 
