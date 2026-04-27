@@ -66,66 +66,22 @@ const Hero = () => {
             </div> */}
           </motion.div>
 
-          {/* Right Imagery / Tech Illustration */}
+          {/* Right Text Content (Engineering & Infrastructure) */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="block relative"
+            className="text-white max-w-2xl mt-12 md:mt-0 md:ml-auto md:pl-8 lg:pl-16"
           >
-            <div className="relative w-full aspect-square max-w-[500px] ml-auto">
-              <div className="absolute inset-0 rounded-full border border-white/10 animate-spin-slow"></div>
-              <div className="absolute inset-4 rounded-full border border-[var(--color-tech-blue)]/30 animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '15s' }}></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-2xl w-[80%] max-w-sm text-center">
-                  <h3 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2">
-                    Services &
-                    <span className="block text-[var(--color-orange)]">Implementation Solutions</span>
-                  </h3>
-                  <div className="w-16 h-1 bg-[var(--color-tech-blue)] mx-auto mb-6"></div>
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-poppins font-bold leading-tight mb-8 flex flex-col w-max">
+              <span>Engineering</span>
+              <span className="text-center w-full">&amp;</span>
+              <span>Infrastructure</span>
+            </h1>
 
-                  <ul className="text-gray-200 mt-6 space-y-4 font-medium text-left inline-block">
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[var(--color-tech-blue)] shadow-[0_0_8px_var(--color-tech-blue)] shrink-0"></div>
-                      <span>Renovation Solutions</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[var(--color-orange)] shadow-[0_0_8px_var(--color-orange)] shrink-0"></div>
-                      <span>Landscaping</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[var(--color-tech-blue)] shadow-[0_0_8px_var(--color-tech-blue)] shrink-0"></div>
-                      <span>Engineering Services</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[var(--color-orange)] shadow-[0_0_8px_var(--color-orange)] shrink-0"></div>
-                      <span>Electricals</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Floating Tech Cards
-              <div className="absolute top-[10%] -left-4 bg-[var(--color-navy)] border border-white/10 p-4 rounded-xl shadow-xl backdrop-blur-md flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
-                <div className="h-10 w-10 bg-[var(--color-tech-blue)]/20 rounded-lg flex items-center justify-center">
-                  <Shield size={20} className="text-[var(--color-tech-blue)]" />
-                </div>
-                <div>
-                  <p className="text-white text-xs font-bold font-poppins">Secure Biometrics</p>
-                  <p className="text-gray-400 text-[10px]">Active Tracking</p>
-                </div>
-              </div> */}
-
-              {/* <div className="absolute bottom-[20%] -right-8 bg-[var(--color-navy)] border border-white/10 p-4 rounded-xl shadow-xl backdrop-blur-md flex items-center gap-3 animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}>
-                <div className="h-10 w-10 bg-[var(--color-orange)]/20 rounded-lg flex items-center justify-center">
-                  <FileCode size={20} className="text-[var(--color-orange)]" />
-                </div>
-                <div>
-                  <p className="text-white text-xs font-bold font-poppins">Custom Software</p>
-                  <p className="text-gray-400 text-[10px]">Cloud Deployed</p>
-                </div>
-              </div> */}
-            </div>
+            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg leading-relaxed">
+              From conceptualization to execution, we design functional and aesthetically premium interiors, undertake structural civil works, and maintain critical naval infrastructure.
+            </p>
           </motion.div>
 
         </div>
