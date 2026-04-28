@@ -70,48 +70,51 @@ const About = () => {
       <section className="py-10">
         <div className="container mx-auto px-4 md:px-8 lg:px-12 max-w-full">
 
-          <div className="grid md:grid-cols-2 gap-12 items-start mb-20">
+          <div className="grid grid-cols-1 gap-12 items-start mb-20">
             <div>
               <SectionHeader title="Our Story" subtitle="Who We Are" />
-              <div className="prose text-gray-600 leading-relaxed text-justify space-y-4">
-                <p>
-                  We are a multi-role firm with the mission of providing innovative services and a vision of serving clients across the Indian Navy. Since our inception in 2010, we have continually expanded our footprint across various technological sectors.
-                </p>
-                <p>
-                  Our expertise spans software development & solutions, security systems sales and service, interior designing and renovation, fabrication, and civil works.
-                </p>
-                <p>
-                  In software, we specialize in <strong>RFID technology</strong> and <strong>cloud computing</strong>. Our state-of-the-art solutions are highly customizable and scalable because we understand that every client is fundamentally different.
-                </p>
-                <p>
-                  We believe in providing full 360° support to our clients, ensuring that technology not only solves immediate problems but provides long-term, reliable infrastructure.
-                </p>
+              <div className="flex md:flex-row flex-col gap-8">
+                <div className="prose text-gray-600 leading-relaxed text-justify space-y-4">
+                  <p>
+                    We are a multi-role firm with the mission of providing innovative services and a vision of serving clients across the Indian Navy. Since our inception in 2010, we have continually expanded our footprint across various technological sectors.
+                  </p>
+                  <p>
+                    Our expertise spans software development & solutions, security systems sales and service, interior designing and renovation, fabrication, and civil works.
+                  </p>
+                  <p>
+                    In software, we specialize in <strong>RFID technology</strong> and <strong>cloud computing</strong>. Our state-of-the-art solutions are highly customizable and scalable because we understand that every client is fundamentally different.
+                  </p>
+                  <p>
+                    We believe in providing full 360° support to our clients, ensuring that technology not only solves immediate problems but provides long-term, reliable infrastructure.
+                  </p>
+                </div>
+                <div className="bg-[var(--color-light-gray)] p-8 rounded-2xl border border-gray-100 shadow-sm relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-tech-blue)]/10 rounded-bl-full"></div>
+                  <h3 className="text-2xl font-poppins font-bold text-[var(--color-navy)] mb-6">Naval Credibility</h3>
+
+                  <div className="flex items-start mb-6">
+                    <ShieldCheck className="text-[var(--color-orange)] mt-1 mr-4 shrink-0" size={28} />
+                    <p className="text-gray-700 font-medium leading-relaxed">
+                      We proudly state that Meghana Technologies is one of the <strong className="text-[var(--color-navy)]">registered and trusted vendors</strong> for the Eastern Naval Command (ENC), Indian Navy - Visakhapatnam.
+                    </p>
+                  </div>
+
+                  <div className="space-y-3 mt-8">
+                    <div className="flex items-center text-sm text-gray-600 font-medium">
+                      <CheckCircle2 size={16} className="text-[var(--color-tech-blue)] mr-2" /> 15+ Years Experience
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600 font-medium">
+                      <CheckCircle2 size={16} className="text-[var(--color-tech-blue)] mr-2" /> 24x7 Active Support Team
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600 font-medium">
+                      <CheckCircle2 size={16} className="text-[var(--color-tech-blue)] mr-2" /> Located in Visakhapatnam
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-[var(--color-light-gray)] p-8 rounded-2xl border border-gray-100 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-tech-blue)]/10 rounded-bl-full"></div>
-              <h3 className="text-2xl font-poppins font-bold text-[var(--color-navy)] mb-6">Naval Credibility</h3>
 
-              <div className="flex items-start mb-6">
-                <ShieldCheck className="text-[var(--color-orange)] mt-1 mr-4 shrink-0" size={28} />
-                <p className="text-gray-700 font-medium leading-relaxed">
-                  We proudly state that Meghana Technologies is one of the <strong className="text-[var(--color-navy)]">registered and trusted vendors</strong> for the Eastern Naval Command (ENC), Indian Navy - Visakhapatnam.
-                </p>
-              </div>
-
-              <div className="space-y-3 mt-8">
-                <div className="flex items-center text-sm text-gray-600 font-medium">
-                  <CheckCircle2 size={16} className="text-[var(--color-tech-blue)] mr-2" /> 15+ Years Experience
-                </div>
-                <div className="flex items-center text-sm text-gray-600 font-medium">
-                  <CheckCircle2 size={16} className="text-[var(--color-tech-blue)] mr-2" /> 24x7 Active Support Team
-                </div>
-                <div className="flex items-center text-sm text-gray-600 font-medium">
-                  <CheckCircle2 size={16} className="text-[var(--color-tech-blue)] mr-2" /> Located in Visakhapatnam
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Team Section */}
