@@ -58,7 +58,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-white flex flex-col pl-8 lg:pl-14 mt-10 md:mt-0"
+            className="text-white flex flex-col md:pl-8 lg:pl-14 mt-10 md:mt-0"
           >
             <h1 className="text-4xl md:text-5xl font-poppins font-bold leading-tight mb-5">
               Engineering
@@ -81,7 +81,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center mt-10 md:mt-16"
         >
           <Link
             to="/services"
