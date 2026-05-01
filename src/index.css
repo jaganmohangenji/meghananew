@@ -14,9 +14,52 @@
   html {
     scroll-behavior: smooth;
   }
+
   body {
     background-color: var(--color-light-gray);
     color: #1f2937;
     font-family: var(--font-roboto);
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .glass-card-light {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .gradient-border-hover {
+    position: relative;
+  }
+
+  .gradient-border-hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--color-tech-blue), var(--color-orange));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .gradient-border-hover:hover::before {
+    opacity: 1;
   }
 }

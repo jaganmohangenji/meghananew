@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-[var(--color-dark)] text-white pt-16 pb-8 border-t-4 border-[var(--color-orange)]">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1fr] gap-y-10 gap-x-6 mb-12">
 
           {/* Brand */}
           <div className="lg:col-span-1">

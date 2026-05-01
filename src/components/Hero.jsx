@@ -5,98 +5,96 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-[90vh] flex flex-col items-center overflow-hidden bg-[var(--color-navy)]">
+    <section className="relative min-h-screen flex items-start justify-center pt-2 overflow-hidden bg-[#0B1120]">
+
       {/* Background */}
-      <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-navy)] via-[var(--color-navy)]/90 to-transparent" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--color-tech-blue)]/20 rounded-full blur-[120px] animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-[var(--color-orange)]/10 rounded-full blur-[150px] animate-pulse" />
 
-      <div className="container mx-auto px-4 md:px-8 lg:px-12 relative z-10 flex flex-col items-center w-full pt-10 pb-12">
+      <div className="container mx-auto px-6 relative z-10">
 
-        {/* Badge — centered below header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex justify-center w-full mb-8"
-        >
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2.5 rounded-full shadow-lg">
-            <Shield size={18} className="text-[var(--color-orange)] mr-2 shrink-0" />
-            <span className="text-sm md:text-base font-medium tracking-wide text-white">
+        {/* Badge */}
+        <div className="flex justify-center mb-9">
+          <div className="glass-card px-6 py-3 rounded-full flex items-center">
+            <Shield size={18} className="text-orange-400 mr-2" />
+            <span className="text-sm text-gray-200">
               Authorized by the technology partner of the Indian Navy.
             </span>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Two-column content */}
-        <div className="grid md:grid-cols-[1fr_1px_1fr] w-full gap-0 mb-10">
+        {/* GRID */}
+        <div className="grid md:grid-cols-[1.35fr_1.3fr] gap-6 max-w-8xl mx-auto">
 
-          {/* Left: Innovative Technology */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white flex flex-col pr-8 lg:pr-14"
-          >
-            <h1 className="text-4xl md:text-5xl font-poppins font-bold leading-tight mb-5">
-              Innovative Technology
-              <br />
-              <span className="text-[var(--color-orange)]">&amp;</span>
-              <br />
-              Security Solutions
-            </h1>
-            <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              Providing services such as application development, hardware solutions,
-              security infrastructure, and maintenance.
-            </p>
+          {/* LEFT CARD */}
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <div className="glass-card p-12 rounded-3xl h-full overflow-hidden">
+
+              <h1 className="flex flex-col gap-3 font-bold text-white leading-tight">
+
+                {/* ✅ AUTO-FIT TEXT */}
+                <div className="whitespace-nowrap text-[clamp(28px,4vw,64px)]">
+                  Innovative Technology
+                </div>
+
+                <div className="text-[clamp(28px,4vw,64px)]">&</div>
+
+                <div className="text-[clamp(28px,4vw,64px)] bg-gradient-to-r from-cyan-400 to-blue-300 bg-clip-text text-transparent">
+                  Security Solutions
+                </div>
+
+              </h1>
+
+              <div className="h-px w-24 bg-cyan-400 mt-6 mb-6" />
+
+              <p className="text-gray-400 leading-relaxed">
+                Providing services such as application development, hardware solutions, security infrastructure, and maintenance.
+              </p>
+
+            </div>
           </motion.div>
 
-          {/* Vertical divider */}
-          <div className="hidden md:block bg-white/15 mx-2" />
+          {/* RIGHT CARD */}
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <div className="glass-card p-12 rounded-3xl h-full">
 
-          {/* Right: Engineering & Infrastructure */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-white flex flex-col md:pl-8 lg:pl-14 mt-10 md:mt-0"
-          >
-            <h1 className="text-4xl md:text-5xl font-poppins font-bold leading-tight mb-5">
-              Engineering
-              <br />
-              <span className="text-[var(--color-orange)]">&amp;</span>
-              <br />
-              Infrastructure
-            </h1>
-            <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              From conceptualization to execution, we design functional and aesthetically
-              premium interiors, undertake structural civil works, and maintain critical
-              naval infrastructure.
-            </p>
+              <h1 className="flex flex-col gap-3 font-bold text-white leading-tight">
+
+                <div className="text-[clamp(28px,4vw,64px)]">
+                  Engineering
+                </div>
+
+                <div className="text-[clamp(28px,4vw,64px)]">&</div>
+
+                <div className="text-[clamp(28px,4vw,64px)] bg-gradient-to-r from-orange-400 to-yellow-300 bg-clip-text text-transparent">
+                  Infrastructure
+                </div>
+
+              </h1>
+
+              <div className="h-px w-24 bg-orange-400 mt-6 mb-6" />
+
+              <p className="text-gray-400 leading-relaxed">
+                From conceptualization to execution, we design functional and aesthetically premium interiors, undertake structural civil works, and maintain critical naval infrastructure.
+              </p>
+
+            </div>
           </motion.div>
 
         </div>
 
-        {/* Buttons — centered below both columns */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mt-10 md:mt-16"
-        >
-          <Link
-            to="/services"
-            className="bg-[var(--color-orange)] hover:bg-[#d97000] text-white px-8 py-3.5 rounded-md font-medium text-lg transition-all flex items-center justify-center group shadow-[0_0_20px_rgba(247,127,0,0.4)]"
-          >
+        {/* Buttons */}
+        <div className="flex gap-6 mt-12 max-w-xl mx-auto">
+          <Link to="/services" className="flex-1 bg-cyan-600 text-white py-4 rounded-xl text-center font-bold">
             Explore Services
-            <ChevronRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
-            to="/contact#contact-form"
-            className="bg-green-600 hover:bg-green-700 text-white px-8 py-3.5 rounded-md font-medium text-lg transition-all flex items-center justify-center"
+            to="/contact"
+            className="flex-1 bg-gradient-to-r from-orange-400 to-yellow-300 text-white py-4 rounded-xl text-center font-bold hover:opacity-90 transition"
           >
             Contact Us
           </Link>
-        </motion.div>
+        </div>
 
       </div>
     </section>

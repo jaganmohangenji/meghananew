@@ -3,6 +3,7 @@ import SectionHeader from './SectionHeader';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Camera, Code, HardHat } from 'lucide-react';
+import '../index.css';
 
 const Services = () => {
   const serviceCards = [
@@ -48,7 +49,7 @@ const Services = () => {
             >
               <Link
                 to={service.path}
-                className="group flex flex-col h-full bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-2xl hover:border-[var(--color-orange)] transition-all duration-300 relative overflow-hidden"
+                className="gradient-border-hover group flex flex-col h-full bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-tech-blue)]/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
 
