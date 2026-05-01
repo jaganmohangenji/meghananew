@@ -16,8 +16,8 @@ const Navbar = () => {
   ];
 
   const serviceCategories = [
-    { name: 'Security Systems', path: '/services/security-systems' },
-    { name: 'Software Development', path: '/services/software-development' },
+    { name: 'Security Systems, Sales & Services', path: '/services/security-systems' },
+    { name: 'Software Solutions', path: '/services/software-development' },
     { name: 'Engineering & Infrastructure', path: '/services/engineering-infrastructure' },
   ];
 
